@@ -278,25 +278,60 @@ class Screen1 extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Expanded(
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return Screen2();
-                          },
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return Screen2();
+                            },
+                          ),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(20, 20, 10, 0),
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          shape: BoxShape.rectangle,
+                          boxShadow: [BoxShadow(blurRadius: 2)],
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(15),
+                            topLeft: Radius.circular(15),
+                            bottomLeft: Radius.circular(10),
+                            bottomRight: Radius.circular(10),
+                          ),
                         ),
-                      );
-                    },
+                        height: 60,
+                        child: Container(
+                          margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                          child: Column(
+                            children: [
+                              Text(
+                                'SAT',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              Text(
+                                '10',
+                                style:
+                                    TextStyle(fontSize: 20, color: Colors.white),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
                     child: Container(
-                      margin: EdgeInsets.fromLTRB(20, 20, 10, 0),
+                      margin: EdgeInsets.fromLTRB(10, 20, 20, 0),
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Colors.white,
                         shape: BoxShape.rectangle,
                         boxShadow: [BoxShadow(blurRadius: 2)],
                         borderRadius: BorderRadius.only(
@@ -312,117 +347,84 @@ class Screen1 extends StatelessWidget {
                         child: Column(
                           children: [
                             Text(
-                              'SAT',
-                              style: TextStyle(color: Colors.white),
+                              'FRI',
+                              style: TextStyle(color: Colors.blue),
                             ),
                             Text(
-                              '10',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                              '9',
+                              style: TextStyle(fontSize: 20, color: Colors.blue),
                             ),
                           ],
                         ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(10, 20, 20, 0),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.rectangle,
-                      boxShadow: [BoxShadow(blurRadius: 2)],
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(15),
-                        topLeft: Radius.circular(15),
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10),
-                      ),
-                    ),
-                    height: 60,
+                  Expanded(
                     child: Container(
-                      margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                      child: Column(
-                        children: [
-                          Text(
-                            'FRI',
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                          Text(
-                            '9',
-                            style: TextStyle(fontSize: 20, color: Colors.blue),
-                          ),
-                        ],
+                      margin: EdgeInsets.fromLTRB(10, 20, 20, 0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.rectangle,
+                        boxShadow: [BoxShadow(blurRadius: 2)],
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(15),
+                          topLeft: Radius.circular(15),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        ),
+                      ),
+                      height: 60,
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                        child: Column(
+                          children: [
+                            Text(
+                              'THU',
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            Text(
+                              '8',
+                              style: TextStyle(fontSize: 20, color: Colors.blue),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(10, 20, 20, 0),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.rectangle,
-                      boxShadow: [BoxShadow(blurRadius: 2)],
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(15),
-                        topLeft: Radius.circular(15),
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10),
-                      ),
-                    ),
-                    height: 60,
+                  Expanded(
                     child: Container(
-                      margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                      child: Column(
-                        children: [
-                          Text(
-                            'THU',
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                          Text(
-                            '8',
-                            style: TextStyle(fontSize: 20, color: Colors.blue),
-                          ),
-                        ],
+                      margin: EdgeInsets.fromLTRB(10, 20, 20, 0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.rectangle,
+                        boxShadow: [BoxShadow(blurRadius: 2)],
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(15),
+                          topLeft: Radius.circular(15),
+                          bottomLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        ),
+                      ),
+                      height: 60,
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                        child: Column(
+                          children: [
+                            Text(
+                              'WED',
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                            Text(
+                              '7',
+                              style: TextStyle(fontSize: 20, color: Colors.blue),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(10, 20, 20, 0),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.rectangle,
-                      boxShadow: [BoxShadow(blurRadius: 2)],
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(15),
-                        topLeft: Radius.circular(15),
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10),
-                      ),
-                    ),
-                    height: 60,
-                    child: Container(
-                      margin: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                      child: Column(
-                        children: [
-                          Text(
-                            'WED',
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                          Text(
-                            '7',
-                            style: TextStyle(fontSize: 20, color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Column(
